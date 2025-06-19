@@ -1,0 +1,132 @@
+body{
+  background:linear-gradient(to BOTTOM right,#1c1c1a,#616247);
+  color: #F1E7E7;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 30px;
+  /* padding: 30px; */
+ 
+}
+.a {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-direction: row;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  top: 0;
+  z-index: 1000;
+  background: none;
+
+  width: 100%;
+  position:sticky;
+
+}
+.menu {
+  margin-top: 18px;
+  /* bottom: 30px; */
+  max-width: 300px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* gap: 25px; */
+  padding: 8px 20px;
+  background: rgba(34, 34, 34, 0.85); /* semi-transparent dark background */
+  border-radius: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  pointer-events: auto;
+  /* align-items: center; */
+}
+.menu-link a{
+  color:#F1E7E7 ;
+  text-decoration: none;
+
+}
+.menu-link {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding:10px 0 ;
+}
+.home{
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding: 30px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.heading {
+  margin: 0px;
+  text-align: center;
+  font-size: 1.5em;
+}
+.a1:hover{
+    transform: scale(.9);
+}
+.a2:hover{
+  transform:scale(.9);
+}
+.a3:hover{
+  transform: scale(.9);
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1.6;
+  }
+}
+.projects {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 24px;
+  background: rgba(34, 34, 34, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.content{
+   text-align: center;
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding: 30px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer {
+  text-align: center;
+  padding: 24px 0 16px 0;
+  color: #F1E7E7;
+  background: transparent;
+  font-size: 1em;
+  margin-top: 40px;
+}
+.contact {
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 24px;
+  /* background: rgba(34, 34, 34, 0.7); */
+  border-radius: 18px;
+  /* box-shadow: 0 2px 12px rgba(0,0,0,0.12); */
+  text-align: center;
+}
+.contact a {
+  color: #DDEB9D;
+  text-decoration: underline;
+}
