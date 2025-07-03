@@ -1,6 +1,7 @@
 body{
      min-height: 90vh;
     display: flex;
+    justify-content:space-evenly;
     align-items: center;
     background: linear-gradient(135deg, #232526 0%, #414345 100%);
 }
