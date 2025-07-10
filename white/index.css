@@ -5,6 +5,7 @@ body {
   align-items: center;
   text-align: center;
   font-family: cursive;
+  background-color: rgba(232, 226, 214, 0.062);
 }
 .menu {
 }
@@ -58,4 +59,9 @@ body {
 .container4 {
 }
 .project4 {
+}
+.Home{
+  background-color: antiquewhite;
+  border-radius: 1em;
+  padding: 0.5em 1em;
 }
