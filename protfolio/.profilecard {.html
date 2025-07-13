@@ -1,0 +1,102 @@
+.profilecard {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    text-align: center;
+    justify-content: center;
+    margin: 2em auto;
+    max-width: 300px;
+    padding: 2em 1.5em;
+    background: #2C2C2A;
+    color: #E3DAC9;
+    align-items: center;
+    border-radius: 2em;
+    box-shadow: 0 8px 32px 0 rgba(134, 136, 165, 0.37);
+    transition: box-shadow 0.3s;
+    margin-left: 3em;
+}
+
+@media (max-width: 600px) {
+    .profilecard {
+        max-width: 90vw;
+        margin-top: 2em;
+        padding: 1em;
+    }
+}
+
+
+
+<div class="profilecard">
+      <img class="logo" src="pic1.jpg" alt="Sanjay's Logo" />
+      <div class="name">sanjay E</div>
+      <p class="description">full-stack developer</p>
+      <br />
+      <div class="contact">
+        <h3>contact</h3>
+        <div class="contact-menu">
+          <a href="#linkedin" class="linkedin">LinkedIn</a><br />
+          <a href="#github" class="github">GitHub</a><br />
+          <a href="#email" class="email">Email</a><br />
+          <a href="#instagram" class="instagram">Instagram</a><br />
+        </div>
+      </div>
+    </div>
+
+
+    /* Add styles for the toggle button */
+.profile-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2C2C2A;
+    border: none;
+    color: #E3DAC9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.profile-toggle:hover {
+    background-color: #3C3C3A;
+    transform: scale(1.1);
+}
+
+.profile-toggle i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Add styles for the hidden state */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100px);
+    transition: all 0.3s ease;
+}
+<button id="profileToggle" class="profile-toggle">
+    <i class="fas fa-user"></i>
+  </button>
+
+
+  .profile-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    border: none;
+    color: #ffffff;
+    background-color: #383836;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
