@@ -28,48 +28,33 @@ body{
     margin-top: 0.1px;
 } 
 .contact{
-    align-self: flex-start;
+    align-self: center;
+    text-align: start;
    color: #ccc;
    text-decoration: none;
-}  
-.linkedin {
+} 
+.contact-title{
+    margin-left: 0.1em;
+    display: flex;
+    justify-content: flex-start;
+
+}
+/* .contact-menu a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+} */
+
+.linkedin, .github, .email, .instagram{
     text-decoration: none;
     color: #ccc;
     margin: 1em;
     gap: 1em;
 }
-.linkedin:hover {
+.linkedin,.github,.email,.instagram:hover{
     color: #fff;
-}
-.github {
-    gap: 1em;
-    text-decoration: none;
-    color: #ccc;
-     transition: color 0.3s;
-    margin: 1em;
-}
-.github:hover {
-    color: #fff;
-}   
-.email {
-    text-decoration: none;
-    margin: 1em;
-     transition: color 0.3s;
-    color: #ccc;
-    gap: 1em;
-}
-.email:hover {
-    color: #fff;
-}   
-.instagram {
-     transition: color 0.3s;
-    gap: 1em;
-    margin: 1em;
-     text-decoration: none;
-     color: #ccc;
-}
-.instagram:hover {
-    color: #fff;
+    cursor: pointer;
 }
 .menu {
     position: fixed;
@@ -176,18 +161,23 @@ body{
     color:#E3DAC9;
     width: 30px;
     height: 30px;
+    cursor: pointer;
+}
+.profile-toggle:hover{
+    color: #fff;
 }
 .content-expanded{
     width: 60%;
     margin: auto;
 }
-.profilecard {
+#profileCard {
     display: flex;
+    /* display: none; */
     flex-direction: column;
     border: none;
     text-align: center;
     justify-content: center;
-    margin: 2em auto;
+    margin: 1em auto;
     max-width: 300px;
     padding: 2em 1.5em;
     background: #2C2C2A;
@@ -197,6 +187,11 @@ body{
     box-shadow: 0 8px 32px 0 rgba(134, 136, 165, 0.37);
     transition: box-shadow 0.3s;
     margin-left: 3em;
+
 }
-
-
+#profileCard.hidden{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
