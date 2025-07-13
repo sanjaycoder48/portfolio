@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sanjay's portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Sanjay's portfolio showcasing projects and skills."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, web developer, projects, skills"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Font Awesome for the toggle icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+      <button id="profileToggle" class="profile-toggle">
+        <i class="fas fa-user"></i>
+      </button>    
+<div class="profilecard">
+  <img class="logo" src="pic1.jpg" alt="Sanjay's Logo" />
+  <div class="name">sanjay E</div>
+  <p class="description">full-stack developer</p>
+  <br />
+  <div class="contact">
+    <h3>contact</h3>
+    <div class="contact-menu">
+      <a href="#linkedin" class="linkedin">LinkedIn</a><br />
+      <a href="#github" class="github">GitHub</a><br />
+      <a href="#email" class="email">Email</a><br />
+      <a href="#instagram" class="instagram">Instagram</a><br />
+    </div>
+  </div>
+</div>
+    <div class="container">
+      <div class="menu">
+        <div class="menu-link">
+          <a href="#home" class="home">home</a>
+          <a href="#about" class="about">About</a>
+          <a href="#projects" class="projects">Projects</a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <section class="first-section"">
+        <h2>Welcome to my portfolio</h2>
+      <p>
+            Hello!,I am web developer with a passion for creating beautiful and functional websites. This portfolio showcases my skills, projects, and experiences in the field of web development.
+        </p>
+        <p>
+            Feel free to explore my projects and learn more about my work. If you have any questions or would like to collaborate, don't hesitate to reach out!
+        </p>
+      </section>
+      <section class="second-section">
+        <h2>projects</h2>
+        <p>
+          Here are some of the projects I have worked on. Each project reflects my skills in web development and my ability to create functional and visually appealing websites.
+        </p>
+        <h3>basic-calculator</h3>
+        <p>
+          A simple calculator application that performs basic arithmetic operations. It is built using HTML, CSS, and JavaScript.
+        </p>
+        <h3>color-changer</h3>
+        <p>
+          A web application that allows users to change the background color of the page. It is built using HTML, CSS, and JavaScript.  
+        </p>
+
+      </section>
+      <section class="third-section">
+        <h2>Skills and technology</h2>
+
+      </section>
+    </div>
+
+    <!-- Add JavaScript for toggle functionality -->
+    <script src="index.js">
+      document.addEventListener("DOMContentLoaded", function () {
+  const profileCard = document.getElementById("profileCard");
+  const toggleButton = document.getElementById("profileToggle");
+  const contentSection = document.querySelector(".content");
+
+  profileCard.classList.add("hidden");
+  contentSection.classList.add("content-expanded");
+
+  toggleButton.addEventListener("click", function () {
+    profileCard.classList.toggle("hidden");
+    contentSection.classList.toggle("content-expanded");
+    toggleButton.querySelector("i").classList.toggle("fa-rotate-180");
+  });
+});
+
+    </script>
+  </body>
+</html>
