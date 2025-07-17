@@ -73,6 +73,89 @@ body {
   align-items: center;
 }
 
+/* Profile Card Styles */
+.description {
+  font-size: small;
+  text-align: center;
+  margin: 0.5em;
+  margin-top: 0.1px;
+}
+
+.contact {
+  align-self: center;
+  text-align: start;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.contact-title {
+  margin-left: 0.1em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.linkedin,
+.github,
+.email,
+.instagram {
+  text-decoration: none;
+  color: #ccc;
+  margin: 1em;
+  gap: 1em;
+}
+
+.linkedin:hover,
+.github:hover,
+.email:hover,
+.instagram:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+#profileCard {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  margin: 1em auto;
+  max-width: 300px;
+  padding: 2em 1.5em;
+  background: #2c2c2a;
+  color: #e3dac9;
+  align-items: center;
+  border-radius: 2em;
+  box-shadow: 0 8px 32px 0 rgba(134, 136, 165, 0.37);
+  transition: all 0.3s ease;
+  margin-left: 3em;
+  z-index: 100;
+}
+
+#profileCard.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.profile-toggle {
+  position: fixed;
+  border: none;
+  top: 20px;
+  left: 20px;
+  background-color: #2c2c2a;
+  border-radius: 50%;
+  color: #e3dac9;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.profile-toggle:hover {
+  color: #fff;
+}
+
 .menu-link {
   color: var(--text);
   text-decoration: none;
@@ -869,6 +952,11 @@ body {
   .project-card {
     margin: 0 auto;
     max-width: 400px;
+  }
+
+  #profileCard {
+    margin: 1em;
+    max-width: 90%;
   }
 }
 
