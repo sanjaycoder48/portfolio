@@ -2,71 +2,380 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanjay E - Portfolio</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="menu">
-        <div class="menu-item">
-          <a class="Home" href="#home">Home</a>
-          <a class="About" href="#about">About</a>
-          <a class="Projects" href="#projects">Projects</a>
-          <a class="Contact" href="#contact">contact</a>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#home">ES</a>
+        </div>
+        <div class="menu-toggle">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="nav-menu">
+          <a class="nav-link active" href="#home">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+          <a class="nav-link" href="#about">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+          </a>
+          <a class="nav-link" href="#projects">
+            <i class="fas fa-code"></i>
+            <span>Projects</span>
+          </a>
+          <a class="nav-link" href="#contact">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
         </div>
       </div>
-    </div>
-    <!-- <img class="logo" src="" alt="web-logo" /> -->
-    <section class="welcome-section">
-      <h1 class="heading">Yo! I'm Sanjay 👨‍💻</h1>
-      <p class="intro">
-        Welcome to my code corner — where logic meets creativity.<br />
-        Dive in and see what I've been building.
-      </p>
+    </nav>
+
+    <section id="home" class="welcome-section">
+      <div class="profile-card">
+        <div class="name-highlight">
+          <span class="name-prefix">Hi, I'm</span>
+          <h1 class="heading">Sanjay E</h1>
+        </div>
+        <div class="typing-container">
+          <span class="static-text">I'm a </span>
+          <span class="dynamic-text">Web Developer</span>
+        </div>
+        <p class="intro">
+          Welcome to my code corner — where logic meets creativity.<br />
+          Dive in and see what I've been building in the world of web
+          development.
+        </p>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow"></div>
+        </div>
+      </div>
     </section>
-    <section class="about-section">
-      <h1 class="about">About me</h1>
-      <p>
-        Hey there! 👋 I'm <strong>E. Sanjay</strong>, a Computer Science
-        Engineering student who's passionate about building things on the web.
-        Currently diving deep into the world of web development with a solid
-        foundation in <strong>HTML</strong>, <strong>CSS</strong>, and
-        <strong>JavaScript</strong>.
-      </p>
-      <p>
-        I enjoy turning ideas into clean, responsive, and visually engaging
-        websites. Right now, I'm focused on leveling up my JavaScript skills and
-        exploring the world of <em>React, Git, and full-stack development</em>.
-      </p>
-      <p>
-        Always curious. Always building. And always open to learning something
-        new every day. 🚀
-      </p>
-      <!-- <img class="photo" src="" alt="photo" /> -->
+
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-intro">
+              Hey there! 👋 I'm <strong>E. Sanjay</strong>, a passionate Web
+              Developer and Computer Science Engineering student.
+            </p>
+            <div class="about-description">
+              <p>
+                I specialize in creating responsive and user-friendly web
+                applications. My journey in web development started with
+                curiosity and has evolved into a deep passion for building
+                digital experiences that make a difference.
+              </p>
+              <p>
+                Currently focusing on <strong>Full Stack Development</strong>,
+                with expertise in modern web technologies and best practices. I
+                believe in writing clean, maintainable code and creating
+                intuitive user experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="expertise-grid">
+            <div class="expertise-card">
+              <i class="fas fa-code"></i>
+              <h3>Frontend Development</h3>
+              <p>
+                Creating responsive and interactive user interfaces with modern
+                frameworks and tools.
+              </p>
+            </div>
+            <div class="expertise-card">
+              <i class="fas fa-database"></i>
+              <h3>Backend Development</h3>
+              <p>Building robust server-side applications and RESTful APIs.</p>
+            </div>
+            <div class="expertise-card">
+              <i class="fas fa-mobile-alt"></i>
+              <h3>Responsive Design</h3>
+              <p>
+                Ensuring seamless experiences across all devices and screen
+                sizes.
+              </p>
+            </div>
+            <div class="expertise-card">
+              <i class="fas fa-tools"></i>
+              <h3>Problem Solving</h3>
+              <p>
+                Finding efficient solutions to complex technical challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="projects">
+
+    <section id="projects" class="projects">
       <div class="container1">
-        <!-- <img src="" class="project1" alt="image1" /> -->
-        <p class="content"></p>
-        <button class="view">view</button>
+        <h3 class="project-title">Interactive Calculator</h3>
+        <div class="project-tech">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JS</span>
+        </div>
+        <p class="content">
+          Modern calculator with clean interface, keyboard support, and
+          calculation history.
+        </p>
+        <div class="project-links">
+          <a
+            href="http://127.0.0.1:5501/calculator/cal.html"
+            class="view"
+            target="_blank"
+            rel="noopener"
+            >View <i class="fas fa-arrow-right"></i
+          ></a>
+          <a href="#" class="github-link" target="_blank" rel="noopener"
+            >Code <i class="fab fa-github"></i
+          ></a>
+        </div>
       </div>
+
       <div class="container2">
-        <!-- <img src="" class="project2" alt="image2" /> -->
-        <p class="content"></p>
-        <button class="view">view</button>
+        <h3 class="project-title">Web Development Blog</h3>
+        <div class="project-tech">
+          <span>Next.js</span>
+          <span>Tailwind</span>
+          <span>Firebase</span>
+        </div>
+        <p class="content">
+          Technical blog with SSR, dynamic content loading, and custom CMS
+          integration.
+        </p>
+        <div class="project-links">
+          <a href="#" class="view" target="_blank" rel="noopener"
+            >View <i class="fas fa-arrow-right"></i
+          ></a>
+          <a href="#" class="github-link" target="_blank" rel="noopener"
+            >Code <i class="fab fa-github"></i
+          ></a>
+        </div>
       </div>
+
       <div class="container3">
-        <!-- <img src="" class="project3" alt="image3" /> -->
-        <p class="content"></p>
-        <button class="view">view</button>
+        <h3 class="project-title">React Weather App</h3>
+        <div class="project-tech">
+          <span>React</span>
+          <span>API</span>
+          <span>CSS3</span>
+        </div>
+        <p class="content">
+          Real-time weather forecasts with location-based updates and
+          interactive maps.
+        </p>
+        <div class="project-links">
+          <a href="#" class="view" target="_blank" rel="noopener"
+            >View <i class="fas fa-arrow-right"></i
+          ></a>
+          <a href="#" class="github-link" target="_blank" rel="noopener"
+            >Code <i class="fab fa-github"></i
+          ></a>
+        </div>
       </div>
+
       <div class="container4">
-        <!-- <img src="" class="project4" alt="image4" /> -->
-        <p class="content"></p>
-        <button class="view">view</button>
+        <h3 class="project-title">Task Management App</h3>
+        <div class="project-tech">
+          <span>TypeScript</span>
+          <span>React</span>
+          <span>Firebase</span>
+        </div>
+        <p class="content">
+          Full-featured task manager with real-time updates and team
+          collaboration.
+        </p>
+        <div class="project-links">
+          <a href="#" class="view" target="_blank" rel="noopener"
+            >View <i class="fas fa-arrow-right"></i
+          ></a>
+          <a href="#" class="github-link" target="_blank" rel="noopener"
+            >Code <i class="fab fa-github"></i
+          ></a>
+        </div>
       </div>
     </section>
-    <footer></footer>
+
+    <footer id="contact">
+      <div class="contact-container">
+        <h2>Let's Connect!</h2>
+        <p class="contact-text">
+          Feel free to reach out for collaborations or just a friendly hello 👋
+        </p>
+        <div class="social-links">
+          <a href="mailto:your.email@example.com" class="social-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+          </a>
+          <a href="https://github.com/yourusername" class="social-btn">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" class="social-btn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://twitter.com/yourusername" class="social-btn">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 E. Sanjay. Built with <i class="fas fa-heart"></i> and ☕</p>
+      </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+            // Close mobile menu if open
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
+          }
+        });
+      });
+
+      // Mobile Menu Toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navMenu = document.querySelector(".nav-menu");
+      const hamburger = document.querySelector(".hamburger");
+
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          navMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+        }
+      });
+
+      // Navbar scroll effect
+      const navbar = document.querySelector(".navbar");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            if (entry.target.hasAttribute("data-aos")) {
+              entry.target.classList.add("aos-animate");
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections and elements with data-aos
+      document.querySelectorAll("section, [data-aos]").forEach((el) => {
+        observer.observe(el);
+        el.classList.add("transition-element");
+      });
+
+      // Active link highlighting using Intersection Observer
+      const navObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add("active");
+                }
+              });
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+          rootMargin: "-50% 0px -50% 0px",
+        }
+      );
+
+      document.querySelectorAll("section").forEach((section) => {
+        navObserver.observe(section);
+      });
+
+      // Typing Animation with smoother transitions
+      const texts = ["Web Developer", "UI Designer", "Problem Solver"];
+      let count = 0;
+      let index = 0;
+      let currentText = "";
+      let letter = "";
+
+      function type() {
+        if (count === texts.length) {
+          count = 0;
+        }
+        currentText = texts[count];
+        letter = currentText.slice(0, ++index);
+
+        document.querySelector(".dynamic-text").textContent = letter;
+        if (letter.length === currentText.length) {
+          count++;
+          index = 0;
+          setTimeout(type, 2000);
+        } else {
+          setTimeout(type, 100);
+        }
+      }
+
+      // Start typing animation
+      type();
+    </script>
   </body>
 </html>

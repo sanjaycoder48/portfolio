@@ -23,29 +23,6 @@
     />
   </head>
   <body>
-    <button
-      id="profileToggle"
-      class="profile-toggle"
-      onclick="toggleProfile()"
-      title="Toggle Profile"
-    >
-      <i class="fas fa-user"></i>
-    </button>
-    <div class="hidden" id="profileCard">
-      <img class="logo" src="pic1.jpg" alt="Sanjay's Logo" />
-      <div class="name">sanjay E</div>
-      <p class="description">full-stack developer</p>
-      <div class="contact">
-        <h3 class="contact-title">contact:</h3>
-        <div class="contact-menu">
-          <a href="#linkedin" class="linkedin">LinkedIn</a><br />
-          <a href="#github" class="github">GitHub</a><br />
-          <a href="#email" class="email">Email</a><br />
-          <a href="#instagram" class="instagram">Instagram</a><br />
-        </div>
-      </div>
-    </div>
-
     <nav class="navbar">
       <div class="nav-content">
         <button
@@ -121,9 +98,9 @@
               <div class="dot"></div>
               <div class="dot"></div>
               <div class="dot"></div>
-            </div>
-          </div>
         </div>
+      </div>
+    </div>
       </section>
 
       <section id="about" class="about-section">
@@ -135,8 +112,8 @@
               beautiful and functional websites. With a strong foundation in
               modern web technologies, I turn ideas into reality through clean
               code and intuitive design.
-            </p>
-            <p>
+        </p>
+        <p>
               My journey in web development has equipped me with both technical
               expertise and creative problem-solving skills. I'm constantly
               learning and adapting to new technologies to deliver the best
@@ -187,12 +164,7 @@
                 <span>JavaScript</span>
               </div>
               <div class="project-links">
-                <a
-                  href="http://127.0.0.1:5501/calculator/cal.html"
-                  class="project-link"
-                  target="_blank"
-                  rel="noopener"
-                >
+                <a href="http://127.0.0.1:5501/calculator/cal.html" class="project-link" target="_blank" rel="noopener">
                   <i class="fas fa-eye"></i>
                 </a>
                 <a href="#" class="project-link" target="_blank" rel="noopener">
@@ -262,6 +234,91 @@
       <p>© 2024 Sanjay. Built with <i class="fas fa-heart"></i></p>
     </footer>
 
-    <script src="index.js"></script>
+    <script>
+      // Typing Animation
+      class TypeWriter {
+        constructor(txtElement, words, wait = 3000) {
+          this.txtElement = txtElement;
+          this.words = words;
+          this.txt = "";
+          this.wordIndex = 0;
+          this.wait = parseInt(wait, 10);
+          this.type();
+          this.isDeleting = false;
+        }
+
+        type() {
+          const current = this.wordIndex % this.words.length;
+          const fullTxt = this.words[current];
+
+          if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+          } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+          }
+
+          this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+          let typeSpeed = 200;
+
+          if (this.isDeleting) {
+            typeSpeed /= 2;
+          }
+
+          if (!this.isDeleting && this.txt === fullTxt) {
+            typeSpeed = this.wait;
+            this.isDeleting = true;
+          } else if (this.isDeleting && this.txt === "") {
+            this.isDeleting = false;
+            this.wordIndex++;
+            typeSpeed = 500;
+          }
+
+          setTimeout(() => this.type(), typeSpeed);
+        }
+      }
+
+      // Init On DOM Load
+      document.addEventListener("DOMContentLoaded", init);
+
+      // Init App
+      function init() {
+        const txtElement = document.querySelector(".dynamic-text");
+        const words = JSON.parse(txtElement.getAttribute("data-words"));
+        const wait = txtElement.getAttribute("data-wait");
+        // Init TypeWriter
+        new TypeWriter(txtElement, words, wait);
+
+        // Initialize skill bars
+        const skillItems = document.querySelectorAll(".skill-item");
+        skillItems.forEach((item) => {
+          const progress = item.getAttribute("data-progress");
+          const progressBar = item.querySelector(".skill-progress");
+          progressBar.style.width = `${progress}%`;
+        });
+
+        // Active menu link
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".menu-link");
+
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").slice(1) === current) {
+              link.classList.add("active");
+            }
+          });
+        });
+      }
+    </script>
   </body>
 </html>
