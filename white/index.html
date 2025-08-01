@@ -13,41 +13,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   </head>
   <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="logo">
-          <a href="#home">ES</a>
-        </div>
-        <div class="menu-toggle">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="nav-menu">
-          <a class="nav-link active" href="#home">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-          </a>
-          <a class="nav-link" href="#about">
-            <i class="fas fa-user"></i>
-            <span>About</span>
-          </a>
-          <a class="nav-link" href="#projects">
-            <i class="fas fa-code"></i>
-            <span>Projects</span>
-          </a>
-          <a class="nav-link" href="#contact">
-            <i class="fas fa-envelope"></i>
-            <span>Contact</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-
+    <div class="float-menu">
+      <button class="gitHub" title="GitHub">
+        <i data-lucide="github"></i>
+      </button>
+    </div>
     <section id="home" class="welcome-section">
       <div class="profile-card">
         <div class="name-highlight">
@@ -376,6 +349,9 @@
 
       // Start typing animation
       type();
+
+      // Initialize Lucide icons
+      lucide.createIcons();
     </script>
   </body>
 </html>
